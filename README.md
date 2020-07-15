@@ -120,6 +120,26 @@ Falsy values : undefined, null, 0, '', NaN;
           var c = new Array(1,2,3);
           var test = [ testResult(a[0]), testResult(a[1]) ]
 
+# Function Constructor as instances of Object
+
+
+//Function constructor
+
+          var person1 = {
+                    name = 'name',
+                    age = 30,
+                    occupation = 'Engineer'
+          };
+          
+          var Person = function (name, age, occupation){
+             this.name = name;
+             this.age = age;
+             this.occupation = occupation;
+          }
+
+          var person1 = new Person('name2', 40, 'tester');
+
+
 New in ES6/ES2015
 # Blocks and IIFES
 
