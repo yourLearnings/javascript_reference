@@ -138,7 +138,7 @@ Falsy values : undefined, null, 0, '', NaN;
           }
 
           var person1 = new Person('name2', 40, 'tester');
-
+new creates an empty object
 
 New in ES6/ES2015
 # Blocks and IIFES
