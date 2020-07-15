@@ -152,6 +152,25 @@ new creates an empty object, since no retrun is defined it returns the empty obj
           var person1 = new Person('name2', 40, 'tester');
           person1.printAge();
 
+#Prototypes
+
+
+          var Person = function (name, age, occupation){
+             this.name = name;
+             this.age = age;
+             this.occupation = occupation;
+       
+          }
+          Person.prototype.calculateAge = function() {
+          console.log('this.age');
+          }
+          
+          
+          var person1 = new Person('name2', 40, 'tester');
+          person1.printAge();
+
+
+
 New in ES6/ES2015
 # Blocks and IIFES
 
