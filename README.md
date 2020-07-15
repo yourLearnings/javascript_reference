@@ -205,7 +205,24 @@ Method two
           var person1 = new Person('name2', 40, 'tester');
           person1.printAge();
 
+# Objects and Primitives 
 
+          //objects 
+          var obj = {
+          name:'ABCD',
+          city: 'mycity'
+          }
+          var age = 43;
+          
+          function change(){
+                    a = 45;
+                    b.city = 'yourcity';   
+          }
+          
+          change(age, obj);
+          
+          console.log(age); //43  primitive variable do not change 
+          console.log(obh.city); // yourcity object can be altered 
 
 # Play with console (try at console --> inspect)
 
