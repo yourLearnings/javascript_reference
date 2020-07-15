@@ -140,6 +140,18 @@ Falsy values : undefined, null, 0, '', NaN;
           var person1 = new Person('name2', 40, 'tester');
 new creates an empty object, since no retrun is defined it returns the empty object into which the variables are assigned.
 
+          var Person = function (name, age, occupation){
+             this.name = name;
+             this.age = age;
+             this.occupation = occupation;
+             this.printAge(){
+             console.log('this.age');
+             }
+          }
+          
+          var person1 = new Person('name2', 40, 'tester');
+          person1.printAge();
+
 New in ES6/ES2015
 # Blocks and IIFES
 
