@@ -121,6 +121,7 @@ Falsy values : undefined, null, 0, '', NaN;
           var test = [ testResult(a[0]), testResult(a[1]) ]
 
 # Function Constructor as instances of Object
+Two popular methods are function constructors and function object create. commonly used is the later.
 
 
 //Function constructor
@@ -151,8 +152,10 @@ new creates an empty object, since no retrun is defined it returns the empty obj
           
           var person1 = new Person('name2', 40, 'tester');
           person1.printAge();
+          
+          
 
-#Prototypes
+# Prototypes
 
 
           var Person = function (name, age, occupation){
@@ -171,6 +174,38 @@ new creates an empty object, since no retrun is defined it returns the empty obj
           
           var person1 = new Person('name2', 40, 'tester');
           person1.printAge();
+
+Method two 
+//object.create 
+
+          //object create 
+          var personPrototype = {
+                    calculateAge: function() {
+                              console.log('this.age');
+                              }
+          };
+          
+          var person1 = Object.create(personPrototype);
+          person1.name = 'name';
+          person1.age = 40;
+          person1.occupation = 'Teacher';
+          
+   
+          var person2 = Object.create(personPrototype, 
+                    {
+                    name: { value: 'name'}, 
+                    age: { value: 'age'}, 
+                    occupation: { value: 'occupation'}
+          }
+
+          
+          //properties 
+          Person.prototype.lastName = 'xxxx';
+          
+          var person1 = new Person('name2', 40, 'tester');
+          person1.printAge();
+
+
 
 # Play with console (try at console --> inspect)
 
